@@ -1,191 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fighting Misinformation - Busia CEN</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Custom color variables */
-      :root {
-        --brand-heading: #212529;
-        --brand-yellow: #dd8627;
-        --brand-dark: #003366;
-        --brand-paragraph: #61666b;
-        --accent: #f1c40f;
-      }
 
-      .text-brand-heading {
-        color: var(--brand-heading);
-      }
-      .text-brand-yellow {
-        color: var(--brand-yellow);
-      }
-      .text-brand-dark {
-        color: var(--brand-dark);
-      }
-      .text-brand-paragraph {
-        color: var(--brand-paragraph);
-      }
-      .bg-brand-yellow {
-        background-color: var(--brand-yellow);
-      }
-      .bg-brand-dark {
-        background-color: var(--brand-dark);
-      }
-      .hover\:text-brand-dark:hover {
-        color: var(--brand-dark);
-      }
-      .hover\:bg-brand-yellow:hover {
-        background-color: var(--brand-yellow);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fighting Misinformation - Busia CEN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-      /* Smooth scroll */
-      html {
-        scroll-behavior: smooth;
+    body {
+      font-family: "Raleway", sans-serif;
+    }
+
+    /* Custom color variables */
+    :root {
+      --brand-heading: #212529;
+      --brand-yellow: #dd8627;
+      --brand-dark: #003366;
+      --brand-paragraph: #61666b;
+      --accent: #f1c40f;
+    }
+
+    .text-brand-heading {
+      color: var(--brand-heading);
+    }
+
+    .text-brand-yellow {
+      color: var(--brand-yellow);
+    }
+
+    .text-brand-dark {
+      color: var(--brand-dark);
+    }
+
+    .text-brand-paragraph {
+      color: var(--brand-paragraph);
+    }
+
+    .bg-brand-yellow {
+      background-color: var(--brand-yellow);
+    }
+
+    .bg-brand-dark {
+      background-color: var(--brand-dark);
+    }
+
+    .hover\:text-brand-dark:hover {
+      color: var(--brand-dark);
+    }
+
+    .hover\:bg-brand-yellow:hover {
+      background-color: var(--brand-yellow);
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Card hover effects */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAVBAR -->
+  <header class="w-full py-5 shadow-md bg-white/60 fixed top-0 z-50 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html">
+          <img src="../assets/images/Busiapng.png" alt="Logo" class="h-12 -ml-2 cursor-pointer" />
+        </a>
+      </div>
+
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li>
+          <a href="../index.html" class="nav-link hover:text-yellow-700">Home</a>
+        </li>
+        <li>
+          <a href="/pages/factchecks.html" class="nav-link hover:text-yellow-700">Fact Checks</a>
+        </li>
+        <li>
+          <a href="/pages/articles.html" class="nav-link hover:text-yellow-700">Articles</a>
+        </li>
+        <li>
+          <a href="/pages/aboutus.html" class="nav-link hover:text-yellow-700">About</a>
+        </li>
+        <li>
+          <a href="/pages/contactus.html" class="nav-link hover:text-yellow-700">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // highlight active link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      if (
+        link.getAttribute("href") &&
+        currentPath.endsWith(link.getAttribute("href").split("/").pop())
+      ) {
+        link.classList.add(
+          "text-yellow-700",
+          "font-semibold",
+          "border-b-2",
+          "border-yellow-700",
+          "pb-1"
+        );
       }
+    });
+  </script>
 
-      /* Card hover effects */
-      .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-    </style>
-  </head>
 
-  <body class="bg-gray-50 text-gray-800">
-    <!-- NAVBAR -->
-    <header
-      class="w-full py-5 shadow-md bg-white/60 fixed top-0 z-50 backdrop-blur-md"
-    >
-      <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <img src="assets/images/Busiapng.png" alt="Logo" class="h-12 -ml-2" />
-        </div>
 
-        <ul class="hidden md:flex gap-8 text-sm font-medium">
-          <li>
-            <a href="#" class="hover:text-brand-yellow transition-colors"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#fact-checks"
-              class="hover:text-brand-yellow transition-colors"
-              >Fact Checks</a
-            >
-          </li>
-          <li>
-            <a href="#learn" class="hover:text-brand-yellow transition-colors"
-              >Learn</a
-            >
-          </li>
-          <li>
-            <a href="#report" class="hover:text-brand-yellow transition-colors"
-              >Report</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="hover:text-brand-yellow transition-colors"
-              >About</a
-            >
-          </li>
-        </ul>
-
-        <button
-          class="bg-brand-yellow text-white px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
-        >
-          Get Started
-        </button>
-      </nav>
-    </header>
-
-    <main class="pt-20">
-      <!-- HERO -->
-      <section
-        class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center"
-      >
-        <div class="relative">
-          <div class="h-6 w-20 bg-blue-200 top-1 absolute -z-10"></div>
-          <h1
-            class="text-5xl md:text-6xl font-extrabold text-brand-heading mb-6"
-          >
-            Fighting <br />
-            <span class="text-brand-yellow">Misinformation</span> <br />
-            in Busia County
-          </h1>
-          <p class="text-lg text-brand-paragraph mb-8 max-w-lg">
-            Your civitech platform for combating misinformation
-          </p>
-          <div class="flex gap-4">
-            <a
-              href="#fact-checks"
-              class="inline-block bg-brand-yellow text-white px-7 py-3.5 rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg"
-            >
-              View Fact Checks
-            </a>
-            <a
-              href="#report"
-              class="inline-block border-2 border-gray-300 text-gray-700 px-7 py-3.5 rounded-lg font-semibold hover:border-brand-yellow hover:text-brand-yellow transition-colors"
-            >
-              Report Claim
-            </a>
-          </div>
-        </div>
-        <img
-          src="assets/images/bglines2.svg"
-          alt="Hero Image"
-          class="absolute inset-0 w-full h-full object-cover -z-10 top-10 blur-sm pointer-events-none"
-        />
-
-        <div class="flex justify-center">
-          <img
-            src="assets/images/heroimage2.png"
-            alt="Hero Image"
-            class="rounded-lg w-full max-w-md md:max-w-full"
-          />
-        </div>
-      </section>
-
-      <!-- STATS SECTION -->
-      <section class="bg-brand-dark py-16">
-        <div
-          class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white"
-        >
-          <div>
-            <div class="text-4xl font-bold text-brand-yellow mb-2">1,247</div>
-            <div class="text-sm opacity-90">Claims Verified</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-brand-yellow mb-2">89%</div>
-            <div class="text-sm opacity-90">Accuracy Rate</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-brand-yellow mb-2">5,340</div>
-            <div class="text-sm opacity-90">Community Members</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-brand-yellow mb-2">24/7</div>
-            <div class="text-sm opacity-90">Monitoring</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PARTNERS -->
-      <section class="max-w-7xl mx-auto px-6 py-16">
-        <p class="text-center text-xl text-gray-700 mb-10 font-bold">
-          Our Partners
+  <main class="pt-20">
+    <!-- HERO -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <div class="h-6 w-20 bg-blue-200 top-1 absolute -z-10"></div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-brand-heading mb-6">
+          Fighting <br />
+          <span class="text-brand-yellow">Misinformation</span> <br />
+          in Busia County
+        </h1>
+        <p class="text-lg text-brand-paragraph mb-8 max-w-lg">
+          Your civitech platform for combating misinformation
         </p>
+        <div class="flex gap-4">
+          <a href="#fact-checks"
+            class="inline-block bg-brand-yellow text-white px-7 py-3.5 rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg">
+            View Fact Checks
+          </a>
+          <a href="#report"
+            class="inline-block border-2 border-gray-300 text-gray-700 px-7 py-3.5 rounded-lg font-semibold hover:border-brand-yellow hover:text-brand-yellow transition-colors">
+            Report Claim
+          </a>
+        </div>
+      </div>
+      <img src="assets/images/bglines2.svg" alt="Hero Image"
+        class="absolute inset-0 w-full h-full object-cover -z-10 top-10  pointer-events-none" />
 
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10 place-items-center"
-        >
-          <!-- Partner Item -->
-          <div
+      <div class="flex justify-center">
+        <img src="assets/images/heroimage2.png" alt="Hero Image" class="rounded-lg w-full max-w-md md:max-w-full" />
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="bg-brand-dark py-16">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-10 text-center text-white px-6">
+        <div class="flex-1 min-w-[150px]">
+          <div class="text-4xl font-bold text-brand-yellow mb-2">1,247</div>
+          <div class="text-sm opacity-90">Claims Verified</div>
+        </div>
+
+        <div class="flex-1 min-w-[150px]">
+          <div class="text-4xl font-bold text-brand-yellow mb-2">89%</div>
+          <div class="text-sm opacity-90">Accuracy Rate</div>
+        </div>
+
+        <div class="flex-1 min-w-[150px]">
+          <div class="text-4xl font-bold text-brand-yellow mb-2">5,340</div>
+          <div class="text-sm opacity-90">Community Members</div>
+        </div>
+
+        <div class="flex-1 min-w-[150px]">
+          <div class="text-4xl font-bold text-brand-yellow mb-2">24/7</div>
+          <div class="text-sm opacity-90">Monitoring</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PARTNERS -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <p class="text-center text-xl text-gray-700 mb-10 font-bold">
+        Our Partners
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 place-items-center">
+        <!-- Partner Item -->
+        <!-- <div
             class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
           >
             <img
@@ -193,9 +201,9 @@
               alt="CFA"
               class="object-contain w-full h-full"
             />
-          </div>
+          </div> -->
 
-          <div
+        <!-- <div
             class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
           >
             <img
@@ -203,775 +211,519 @@
               alt="Africa Check"
               class="object-contain w-full h-full"
             />
-          </div>
+          </div> -->
 
-          <div
-            class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
-          >
-            <img
-              src="assets/images/partners/bunyala.png"
-              alt="Bunyala"
-              class="object-contain w-full h-full"
-            />
-          </div>
-
-          <div
-            class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
-          >
-            <img
-              src="assets/images/partners/dw.png"
-              alt="DW"
-              class="object-contain w-full h-full"
-            />
-          </div>
-
-          <div
-            class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
-          >
-            <img
-              src="assets/images/partners/european.png"
-              alt="European"
-              class="object-contain w-full h-full"
-            />
-          </div>
-
-          <div
-            class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
-          >
-            <img
-              src="assets/images/partners/yellow.png"
-              alt="Yellow"
-              class="object-contain w-full h-full"
-            />
-          </div>
+        <div
+          class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition">
+          <img src="assets/images/partners/bunyala.png" alt="Bunyala" class="object-contain w-full h-full" />
         </div>
-      </section>
 
-      <!-- INFO SPLIT SECTION -->
-      <section
-        class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center"
-      >
-        <div class="relative h-full">
-          <div
-            class="absolute -inset-4 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-2xl opacity-30 blur-xl"
-          ></div>
-          <img
-            src="assets/images/disinformation.jpg"
-            alt="Fake News Illustration"
-            class="relative h-full rounded-2xl shadow-lg"
-          />
+        <div
+          class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition">
+          <img src="assets/images/partners/dw.png" alt="DW" class="object-contain w-full h-full scale-125" />
         </div>
-        <div>
-          <h2 class="text-4xl font-bold text-brand-heading mb-3">Rationale</h2>
-          <p class="text-brand-paragraph mb-4 leading-relaxed">
-            Disinformation in Busia spreads rapidly through social media, local
-            networks, and vernacular communication channels, often undermining
-            trust in institutions, fuelling division, and discouraging civic
-            participation. Existing media platforms provide limited dedicated
-            space for verification and public accountability.
-          </p>
-          <h4 class="font-semibold mb-4">
-            By establishing a fact-checking and engagement platform, Busia CEN
-            aims to:
-          </h4>
-          <div class="space-y-4">
-            <div class="flex gap-4 items-center">
-              <div
-                class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold"
-              >
-                1
-              </div>
-              <div>
-                <p class="text-sm text-brand-paragraph">
-                  Debunk false narratives in local languages and contexts.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-4 items-center">
-              <div
-                class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold"
-              >
-                2
-              </div>
 
-              <p class="text-sm text-brand-paragraph">
-                Promote community-driven accountability by publishing
-                fact-checks and analysis on governance, public services, and
-                elections.
-              </p>
-            </div>
-            <div class="flex gap-4 items-center">
-              <div
-                class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold"
-              >
-                3
-              </div>
-
-              <p class="text-sm text-brand-paragraph">
-                Equip citizens and youth with media literacy skills, enabling
-                them to identify and counter misinformation.
-              </p>
-            </div>
-            <div class="flex gap-4 items-center">
-              <div
-                class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold"
-              >
-                2
-              </div>
-
-              <p class="text-sm text-brand-paragraph">
-                Amplify Busia voices nationally and regionally, contributing to
-                Africa-wide efforts against disinformation.
-              </p>
-            </div>
-          </div>
+        <div
+          class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition">
+          <img src="assets/images/partners/european.png" alt="European"
+            class="object-contain w-full h-full scale-125" />
         </div>
-      </section>
 
-      <!-- FACT CHECK CARDS SECTION -->
-      <section id="fact-checks" class="bg-gray-100 py-20">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="flex items-center justify-between mb-10">
-            <div>
-              <h2 class="text-3xl font-bold text-brand-heading mb-2">
-                Latest Fact Checks
-              </h2>
-              <p class="text-brand-paragraph">
-                Recently verified claims from across Busia County
-              </p>
+        <div
+          class="w-24 h-24 flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition">
+          <img src="assets/images/partners/yellow.png" alt="Yellow" class="object-contain w-full h-full scale-125" />
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO SPLIT SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative h-full">
+        <div class="absolute -inset-4 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-2xl opacity-30 blur-xl">
+        </div>
+        <img src="assets/images/disinformation.jpg" alt="Fake News Illustration"
+          class="relative h-full rounded-2xl shadow-lg hover:brightness-125 transition" />
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold text-brand-heading mb-3">Rationale</h2>
+        <p class="text-brand-paragraph mb-4 leading-relaxed">
+          Disinformation in Busia spreads rapidly through social media, local
+          networks, and vernacular communication channels, often undermining
+          trust in institutions, fuelling division, and discouraging civic
+          participation. Existing media platforms provide limited dedicated
+          space for verification and public accountability.
+        </p>
+        <h4 class="font-semibold mb-4">
+          By establishing a fact-checking and engagement platform, Busia CEN
+          aims to:
+        </h4>
+        <div class="space-y-4">
+          <div class="flex gap-4 items-center">
+            <div
+              class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold">
+              1
             </div>
             <div>
-              <a
-                href="#"
-                class="text-brand-yellow font-semibold hover:underline"
-                >View All</a
-              >
+              <p class="text-sm text-brand-paragraph">
+                Debunk false narratives in local languages and contexts.
+              </p>
             </div>
           </div>
-
-          <div class="grid md:grid-cols-3 gap-8">
+          <div class="flex gap-4 items-center">
             <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/fakenews.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-red-50 text-red-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                False / Misleading
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>3 days ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
+              class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold">
+              2
             </div>
 
+            <p class="text-sm text-brand-paragraph">
+              Promote community-driven accountability by publishing
+              fact-checks and analysis on governance, public services, and
+              elections.
+            </p>
+          </div>
+          <div class="flex gap-4 items-center">
             <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/freespeech2.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-green-100 text-green-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                TRUE
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>1 week ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
+              class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold">
+              3
             </div>
 
+            <p class="text-sm text-brand-paragraph">
+              Equip citizens and youth with media literacy skills, enabling
+              them to identify and counter misinformation.
+            </p>
+          </div>
+          <div class="flex gap-4 items-center">
             <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/freespeech2.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-green-100 text-green-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                TRUE
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>1 week ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            
-            <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/busiaimg.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                MISLEADING
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>5 days ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/busiaimg.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                MISLEADING
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>5 days ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
+              class="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-brand-yellow font-bold">
+              2
             </div>
 
-            <div
-              class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-            >
-              <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="assets/images/busiaimg.jpg"
-                  alt="Fact Check"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-                Claim about local government spending
-              </h3>
-              <span
-                class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide"
-              >
-                MISLEADING
-              </span>
-              <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua...
-              </p>
-              <div
-                class="mt-auto flex items-center justify-between text-xs text-gray-500"
-              >
-                <span>5 days ago</span>
-                <a
-                  href="#"
-                  class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-                >
-                  Read More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <p class="text-sm text-brand-paragraph">
+              Amplify Busia voices nationally and regionally, contributing to
+              Africa-wide efforts against disinformation.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- LEARN CARDS -->
-      <section id="learn" class="max-w-7xl mx-auto px-6 py-20">
+    <!-- FACT CHECK CARDS SECTION -->
+    <section id="fact-checks" class="bg-gray-100 py-20">
+      <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between mb-10">
           <div>
             <h2 class="text-3xl font-bold text-brand-heading mb-2">
-              Learn to Spot Misinformation
+              Latest Fact Checks
             </h2>
             <p class="text-brand-paragraph">
-              Build your media literacy skills with our guides
+              Recently verified claims from across Busia County
             </p>
           </div>
-          <a href="#" class="text-brand-yellow font-semibold hover:underline"
-            >All Articles →</a
-          >
+          <div>
+            <a href="pages/factchecks.html" class="text-brand-yellow font-semibold hover:underline">View All</a>
+          </div>
         </div>
+
         <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-          >
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
             <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-              <img
-                src="assets/images/Verify.jpg"
-                alt="Fact Check"
-                class="w-full h-full object-cover"
-              />
+              <img src="assets/images/fakenews.jpg" alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
             </div>
             <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-              5 Ways to Verify a News Story
+              Claim about local government spending
             </h3>
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="self-start bg-red-50 text-red-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+                Public Services
+              </span>
+              <span
+                class="self-start bg-red-50 text-red-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+                False / Misleading
+              </span>
+            </div>
             <p class="text-sm text-gray-600 leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              Bloggers and social media users have been sharing posts claiming
+              that the local government has misappropriated funds allocated
+              for community development projects...
             </p>
-            <div
-              class="mt-auto flex items-center justify-between text-xs text-gray-500"
-            >
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-              >
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>3 days ago</span>
+              <a href="" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
                 Read More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-4 h-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
           </div>
 
-          <div
-            class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-          >
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
             <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-              <img
-                src="assets/images/antiscience.jpg"
-                alt="Fact Check"
-                class="w-full h-full object-cover"
-              />
+              <img src="assets/images/freespeech2.jpg" alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
             </div>
             <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-              Why Misinformation Spreads So Fast
+              Claim about local government spending
             </h3>
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="self-start bg-green-100 text-green-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+                Elections
+              </span>
+              <span
+                class="self-start bg-green-100 text-green-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+                TRUE
+              </span>
+            </div>
             <p class="text-sm text-gray-600 leading-relaxed mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua...
             </p>
-            <div
-              class="mt-auto flex items-center justify-between text-xs text-gray-500"
-            >
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-              >
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>1 week ago</span>
+              <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
                 Read More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-4 h-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
           </div>
 
-          <div
-            class="bg-white rounded-xl shadow-sm border hover:shadow-md transition p-6 flex flex-col"
-          >
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
             <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
-              <img
-                src="assets/images/fakenewstwo.jpg"
-                alt="Fact Check"
-                class="w-full h-full object-cover"
-              />
+              <img src="assets/images/freespeech2.jpg" alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
             </div>
             <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
-              How to Protect Yourself from Fake News
+              Claim about local government spending
             </h3>
+            <span
+              class="self-start bg-green-100 text-green-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+              TRUE
+            </span>
             <p class="text-sm text-gray-600 leading-relaxed mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua...
             </p>
-            <div
-              class="mt-auto flex items-center justify-between text-xs text-gray-500"
-            >
-              <a
-                href="#"
-                class="flex items-center gap-1 font-medium text-brand-yellow hover:underline"
-              >
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>1 week ago</span>
+              <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
                 Read More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="w-4 h-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
+            <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+              <img src="assets/images/busiaimg.jpg" alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
+            </div>
+            <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+              Claim about local government spending
+            </h3>
+            <span
+              class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+              MISLEADING
+            </span>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua...
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>5 days ago</span>
+              <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
+            <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+              <img src="assets/images/fakenews.jpg" alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
+            </div>
+            <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+              Claim about local government spending
+            </h3>
+            <span
+              class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+              MISLEADING
+            </span>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua...
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>5 days ago</span>
+              <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
+            <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+              <img src="assets/images/disinformation.jpg " alt="Fact Check"
+                class="w-full h-full object-cover group-hover:brightness-125 transition" />
+            </div>
+            <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+              Government officials involved in corruption
+            </h3>
+            <span
+              class="self-start bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full uppercase text-[10px] font-bold mb-3 tracking-wide">
+              MISLEADING
+            </span>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua...
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+              <span>5 days ago</span>
+              <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- REPORT FORM -->
-      <section id="report" class="relative py-28 mb-28">
-        <img
-          src="assets/images/report.jpg"
-          alt="Hero Image"
-          class="absolute inset-0 w-full h-full object-cover -z-10 opacity-20  pointer-events-none"
-        />
-        <div class="max-w-3xl mx-auto px-6">
-          <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold text-brand-heading mb-3">
-              Report Misinformation
-            </h2>
-            <p class="text-brand-paragraph">
-              Help us identify and verify suspicious claims in your community
-            </p>
-          </div>
-          <form
-            class="bg-white/60 rounded-2xl shadow-xl p-8 space-y-5 backdrop-blur-md"
-          >
-            <div class="grid md:grid-cols-2 gap-5">
-              <input
-                class="border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-                placeholder="Your Name"
-              />
-              <input
-                class="border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-                placeholder="Email Address"
-                type="email"
-              />
-            </div>
-            <input
-              class="w-full border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-              placeholder="Claim or Topic"
-            />
-            <select
-              class="w-full border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-            >
-              <option>Select Category</option>
-              <option>Politics</option>
-              <option>Health</option>
-              <option>Education</option>
-              <option>Business</option>
-              <option>Other</option>
-            </select>
-            <textarea
-              class="w-full border border-gray-300 p-3.5 rounded-lg h-36 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-              placeholder="Describe the misinformation you encountered. Include links or sources if available..."
-            ></textarea>
-            <button
-              type="submit"
-              class="w-full bg-brand-yellow text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg"
-            >
-              Submit Report
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-brand-dark text-white py-12">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+    <!-- LEARN CARDS -->
+    <section id="learn" class="max-w-7xl mx-auto px-6 py-20">
+      <div class="flex items-center justify-between mb-10">
         <div>
-          <div class="flex items-center gap-3 mb-4">
-            <img src="assets/images/Busialogo.jpg" alt="Logo" class="h-12" />
-          </div>
-          <p class="text-gray-300 text-sm max-w-xs leading-relaxed">
-            Independent fact-checks, community insights, and accountability
-            stories from Busia CEN
+          <h2 class="text-3xl font-bold text-brand-heading mb-2">
+            Learn to Spot Misinformation
+          </h2>
+          <p class="text-brand-paragraph">
+            Build your media literacy skills with our guides
           </p>
         </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-brand-yellow">Quick Links</h4>
-          <ul class="space-y-4 text-sm">
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#fact-checks"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Fact Checks</a
-              >
-            </li>
-            <li>
-              <a
-                href="#learn"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Learn</a
-              >
-            </li>
-            <li>
-              <a
-                href="#report"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Report</a
-              >
-            </li>
-          </ul>
+        <a href="pages/articles.html" class="text-brand-yellow font-semibold hover:underline">All Articles →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white group rounded-xl shadow-sm border hover:shadow-lg transition p-6 flex flex-col">
+          <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+            <img src="assets/images/Verify.jpg" alt="Fact Check"
+              class="w-full h-full object-cover group-hover:brightness-125 transition" />
+          </div>
+          <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+            5 Ways to Verify a News Story
+          </h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          </p>
+          <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+            <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-brand-yellow">Resources</h4>
-          <ul class="space-y-4 text-sm">
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Methodology</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Partners</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Contact</a
-              >
-            </li>
-          </ul>
+
+        <div class="bg-white rounded-xl group shadow-sm border hover:shadow-lg transition p-6 flex flex-col">
+          <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+            <img src="assets/images/antiscience.jpg" alt="Fact Check"
+              class="w-full h-full object-cover group-hover:brightness-125 transition" />
+          </div>
+          <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+            Why Misinformation Spreads So Fast
+          </h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          </p>
+          <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+            <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-brand-yellow">Connect with Us</h4>
-          <ul class="space-y-4 text-sm">
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Twitter</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Facebook</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >WhatsApp</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-300 hover:text-white transition-colors"
-                >Email Us</a
-              >
-            </li>
-          </ul>
+
+        <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg group transition p-6 flex flex-col">
+          <div class="w-full h-44 mb-5 overflow-hidden rounded-lg">
+            <img src="assets/images/fakenewstwo.jpg" alt="Fact Check"
+              class="w-full h-full object-cover group-hover:brightness-125 transition" />
+          </div>
+          <h3 class="font-bold text-lg leading-snug mb-3 text-gray-900">
+            How to Protect Yourself from Fake News
+          </h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          </p>
+          <div class="mt-auto flex items-center justify-between text-xs text-gray-500">
+            <a href="#" class="flex items-center gap-1 font-medium text-brand-yellow hover:underline">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div
-        class="max-w-7xl mx-auto px-6 mt-10 pt-8 border-t border-gray-300 text-center text-gray-400 text-sm"
-      >
-        <p>
-          © 2025 Busia County Civic Engagement Network (CEN). All rights
-          reserved.
+    </section>
+
+    <!-- REPORT FORM -->
+    <section id="report" class="relative py-28 mb-28">
+      <img src="assets/images/report.jpg" alt="Hero Image"
+        class="absolute inset-0 w-full h-full object-cover -z-10 opacity-20 pointer-events-none" />
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-brand-heading mb-3">
+            Report Misinformation
+          </h2>
+          <p class="text-brand-paragraph">
+            Help us identify and verify suspicious claims in your community
+          </p>
+        </div>
+        <form class="bg-white/60 rounded-2xl shadow-xl p-8 space-y-5 backdrop-blur-md">
+          <div class="grid md:grid-cols-2 gap-5">
+            <input
+              class="border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+              placeholder="Your Name" />
+            <input
+              class="border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+              placeholder="Email Address" type="email" />
+          </div>
+          <input
+            class="w-full border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+            placeholder="Claim or Topic" />
+          <select
+            class="w-full border border-gray-300 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow">
+            <option>Select Category</option>
+            <option>Politics</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Business</option>
+            <option>Other</option>
+          </select>
+          <textarea
+            class="w-full border border-gray-300 p-3.5 rounded-lg h-36 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+            placeholder="Describe the misinformation you encountered. Include links or sources if available..."></textarea>
+          <button type="submit"
+            class="w-full bg-brand-yellow text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity shadow-lg">
+            Submit Report
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop"
+    class="hidden fixed bottom-6 right-6 w-10 h-10 rounded-full shadow-lg flex items-center justify-center bg-white border hover:shadow-xl transition"
+    aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      class="w-4 h-4 rotate-[-90deg] transition-transform duration-200 group-hover:rotate-0">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
+  <script>
+    const btn = document.getElementById("backToTop");
+
+    // Show when scrolling down
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btn.classList.remove("hidden");
+      } else {
+        btn.classList.add("hidden");
+      }
+    });
+
+    // Scroll to top on click
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/images/Busialogo.jpg" alt="Logo" class="h-12" />
+        </div>
+        <p class="text-gray-300 text-sm max-w-xs leading-relaxed">
+          Independent fact-checks, community insights, and accountability
+          stories from Busia CEN
         </p>
       </div>
-    </footer>
-  </body>
+      <!-- vertical divider -->
+      <span class="border-l border-gray-500 mx-3"></span>
+
+      <div class="">
+        <h4 class="font-semibold mb-4 text-brand-yellow">Quick Links</h4>
+        <ul class="space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="/pages/factchecks.html" class="text-gray-300 hover:text-white transition-colors">Fact Checks</a>
+          </li>
+          <li>
+            <a href="/pages/articles.html" class="text-gray-300 hover:text-white transition-colors">Articles</a>
+          </li>
+          <li>
+            <a href="/pages/contactus.html" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <span class="border-l border-gray-500 mx-3"></span>
+      <div>
+        <h4 class="font-semibold mb-4 text-brand-yellow">Connect with Us</h4>
+        <ul class="space-y-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Twitter</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Facebook</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">WhatsApp</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors">Email Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-10 pt-8 border-t border-gray-500 text-center text-gray-300 text-sm">
+      <p>
+        © 2025 Busia County Civic Engagement Network (CEN). All rights
+        reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>

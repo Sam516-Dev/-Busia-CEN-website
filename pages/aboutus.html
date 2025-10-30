@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fighting Misinformation - Busia CEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+        body {
+            font-family: "Raleway", sans-serif;
+        }
+
+        /* Custom color variables */
+        :root {
+            --brand-heading: #212529;
+            --brand-yellow: #dd8627;
+            --brand-dark: #003366;
+            --brand-paragraph: #61666b;
+            --accent: #f1c40f;
+        }
+
+        .text-brand-heading {
+            color: var(--brand-heading);
+        }
+
+        .text-brand-yellow {
+            color: var(--brand-yellow);
+        }
+
+        .text-brand-dark {
+            color: var(--brand-dark);
+        }
+
+        .text-brand-paragraph {
+            color: var(--brand-paragraph);
+        }
+
+        .bg-brand-yellow {
+            background-color: var(--brand-yellow);
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .hover\:text-brand-dark:hover {
+            color: var(--brand-dark);
+        }
+
+        .hover\:bg-brand-yellow:hover {
+            background-color: var(--brand-yellow);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Card hover effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- NAVBAR -->
+    <header class="w-full py-5 shadow-md bg-white/60 fixed top-0 z-50 backdrop-blur-md">
+        <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="../index.html">
+                    <img src="../assets/images/Busiapng.png" alt="Logo" class="h-12 -ml-2 cursor-pointer" />
+                </a>
+            </div>
+
+            <ul class="hidden md:flex gap-8 text-sm font-medium">
+                <li>
+                    <a href="../index.html" class="nav-link hover:text-yellow-700">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/factchecks.html" class="nav-link hover:text-yellow-700">Fact Checks</a>
+                </li>
+                <li>
+                    <a href="/pages/articles.html" class="nav-link hover:text-yellow-700">Articles</a>
+                </li>
+                <li>
+                    <a href="/pages/aboutus.html" class="nav-link hover:text-yellow-700">About</a>
+                </li>
+                <li>
+                    <a href="/pages/contactus.html" class="nav-link hover:text-yellow-700">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        // highlight active link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll(".nav-link").forEach((link) => {
+            if (
+                link.getAttribute("href") &&
+                currentPath.endsWith(link.getAttribute("href").split("/").pop())
+            ) {
+                link.classList.add(
+                    "text-yellow-700",
+                    "font-semibold",
+                    "border-b-2",
+                    "border-yellow-700",
+                    "pb-1"
+                );
+            }
+        });
+    </script>
+
+    <main class="pt-20 space-y-16">
+        <!-- Hero Section -->
+        <section class="relative w-full h-72 flex items-center justify-center text-center overflow-hidden">
+            <img src="../assets/images/aboutus.jpg" alt="About Us Banner"
+                class="absolute inset-0 w-full h-full object-cover opacity-20" />
+            <div class="relative z-10">
+                <h1
+                    class="text-5xl md:text-6xl font-extrabold text-brand-dark mb-4 border-b-4 py-4 border-yellow-600 inline-block">
+                    About Us
+                </h1>
+                <p class="text-gray-800 text-lg max-w-xl mx-auto">
+                    Learn more about Busia County Education Network (Busia CEN) and our
+                    mission to fight misinformation and promote accountability.
+                </p>
+            </div>
+        </section>
+
+        <!-- Background -->
+        <section class="max-w-5xl mx-auto px-6 space-y-6 text-gray-700">
+            <h2 class="text-2xl font-bold text-brand-heading border-b pb-2 border-yellow-500">Background</h2>
+            <p>
+                Busia County faces growing challenges of misinformation that affect youth
+                accountability, women in leadership, and civic participation. Under the
+                <span class="font-semibold">DWA TrustLab Incubator project (2025)</span>,
+                Busia CEN is establishing a community-driven fact-checking platform to
+                strengthen public trust and informed participation in governance.
+            </p>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="max-w-5xl mx-auto px-6 space-y-6 text-gray-700">
+            <h2 class="text-2xl font-bold text-brand-heading border-b pb-2 border-yellow-500">Our Mission</h2>
+            <p>
+                To empower communities in Busia to identify, challenge, and counter
+                misinformation by promoting digital literacy, transparency, and civic
+                engagement through verified information and dialogue.
+            </p>
+        </section>
+
+        <!-- Objectives -->
+        <section class="max-w-5xl mx-auto px-6 space-y-4 text-gray-700">
+            <h2 class="text-2xl font-bold text-brand-heading border-b pb-2 border-yellow-500">Our Objectives</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Establish a responsive fact-checking and community engagement platform.</li>
+                <li>Promote participatory reporting and user-driven claim submissions.</li>
+                <li>Build Busia CEN’s editorial and technical capacity for sustainability.</li>
+                <li>Connect with regional networks like Code for Africa’s AFCA.</li>
+            </ul>
+        </section>
+
+        <!-- Expected Results -->
+        <section class="max-w-5xl mx-auto px-6 space-y-4 text-gray-700">
+            <h2 class="text-2xl font-bold text-brand-heading border-b pb-2 border-yellow-500">Expected Results</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>A fully functional community fact-checking website for Busia.</li>
+                <li>Dozens of verified fact-checks and community reports each year.</li>
+                <li>Trained local ambassadors and editorial staff producing credible content.</li>
+                <li>Greater awareness and resilience against misinformation across the county.</li>
+            </ul>
+        </section>
+
+        <!-- Support -->
+        <section class="max-w-5xl mx-auto px-6 space-y-4 text-gray-700 pb-16">
+            <h2 class="text-2xl font-bold text-brand-heading border-b pb-2 border-yellow-500">Support & Collaboration</h2>
+            <p>
+                Busia CEN welcomes partnerships for technical support, mentorship, and
+                amplification of verified content. Together, we can build a more informed
+                and accountable community.
+            </p>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
