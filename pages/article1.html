@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Ways to Verify a News Story - Busia CEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brand-heading: #212529;
+            --brand-yellow: #DD8627;
+            --brand-dark: #003366;
+            --brand-paragraph: #61666B;
+            --accent: #F1C40F;
+        }
+
+        .text-brand-heading {
+            color: var(--brand-heading);
+        }
+
+        .text-brand-yellow {
+            color: var(--brand-yellow);
+        }
+
+        .text-brand-dark {
+            color: var(--brand-dark);
+        }
+
+        .text-brand-paragraph {
+            color: var(--brand-paragraph);
+        }
+
+        .bg-brand-yellow {
+            background-color: var(--brand-yellow);
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .hover\:text-brand-yellow:hover {
+            color: var(--brand-yellow);
+        }
+
+        .border-brand-yellow {
+            border-color: var(--brand-yellow);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .step-card {
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(8px);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--brand-heading);
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--brand-heading);
+        }
+
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: var(--brand-paragraph);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--brand-paragraph);
+        }
+
+        .article-content strong {
+            color: var(--brand-heading);
+            font-weight: 600;
+        }
+
+        .article-content a {
+            color: var(--brand-yellow);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- NAVBAR -->
+    <header class="w-full py-5 shadow-md bg-white/60 fixed top-0 z-50 backdrop-blur-md">
+        <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="../index.html">
+                    <img src="../assets/images/Busiapng.png" alt="Logo" class="h-12 -ml-2 cursor-pointer" />
+                </a>
+            </div>
+
+            <ul class="hidden md:flex gap-8 text-sm font-medium">
+                <li>
+                    <a href="../index.html" class="nav-link hover:text-yellow-700">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/factchecks.html" class="nav-link hover:text-yellow-700">Fact Checks</a>
+                </li>
+                <li>
+                    <a href="/pages/articles.html" class="nav-link hover:text-yellow-700">Articles</a>
+                </li>
+                <li>
+                    <a href="/pages/aboutus.html" class="nav-link hover:text-yellow-700">About</a>
+                </li>
+                <li>
+                    <a href="/pages/contactus.html" class="nav-link hover:text-yellow-700">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-6 pb-20 mt-28">
+
+        <!-- BREADCRUMB -->
+        <div class="max-w-4xl mx-auto px-6 mb-6">
+            <nav class="flex items-center gap-2 text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-brand-yellow transition-colors">Home</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <a href="/pages/articles.html" class="hover:text-brand-yellow transition-colors">Articles</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="text-gray-900 font-medium">Verify News Stories</span>
+            </nav>
+        </div>
+
+        <!-- ARTICLE HEADER -->
+        <article class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-sm text-gray-500">
+                    <span
+                        class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold uppercase tracking-wide text-xs">
+                        Media Literacy Guide
+                    </span>
+                    <span>Published: March 1, 2025</span>
+                    <span>•</span>
+                    <span>8 min read</span>
+                </div>
+
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-heading mb-5 leading-tight">
+                    5 Essential Ways to Verify a News Story
+                </h1>
+
+                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                    In today's digital world, misinformation spreads faster than ever. Learn five practical ways to
+                    verify
+                    news stories before sharing them — and help strengthen trust in your community.
+                </p>
+
+                <!-- Author -->
+                <div class="flex items-center gap-4 pb-4 border-b border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            BC
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Busia CEN Editorial Team</p>
+                            <p class="text-sm text-gray-500">Media Literacy Experts</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <figure class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 mb-10">
+                <img src="../assets/images/Verify.jpg" alt="Verifying News Sources"
+                    class="w-full h-[420px] object-cover" />
+            </figure>
+
+            <!-- Article Content -->
+            <div class="article-content prose max-w-none text-gray-800 leading-relaxed mb-16">
+                <h2 class="text-2xl font-bold text-brand-heading mt-8 mb-3">Why Verification Matters</h2>
+                <p>
+                    In an era where misinformation can spread like wildfire, verifying news stories is essential. False
+                    information
+                    can lead to panic, confusion, and division. Taking a few minutes to confirm details can ensure that
+                    what we share
+                    is factual and constructive.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-heading mt-10 mb-3">5 Proven Techniques to Verify News Stories
+                </h2>
+                <ol class="list-decimal pl-6 space-y-4">
+                    <li><strong>Check the Source:</strong> Confirm the credibility of the publisher or author. Stick to
+                        official or well-established outlets.</li>
+                    <li><strong>Cross-Reference Information:</strong> Compare with multiple credible sources. If only
+                        one outlet reports it, remain skeptical.</li>
+                    <li><strong>Use Fact-Checking Websites:</strong> Sites like <em>Snopes</em>, <em>FactCheck.org</em>,
+                        and <em>PolitiFact</em> specialize in debunking misinformation.</li>
+                    <li><strong>Examine Visuals:</strong> Use tools like Google Reverse Image Search or TinEye to verify
+                        photos and videos.</li>
+                    <li><strong>Read Beyond Headlines:</strong> Headlines can be misleading — always read the full story
+                        for context and accuracy.</li>
+                </ol>
+
+                <h2 class="text-2xl font-bold text-brand-heading mt-10 mb-3">Resources for Further Learning</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><a href="https://www.factcheck.org" class="text-brand-yellow hover:underline">FactCheck.org</a>
+                    </li>
+                    <li><a href="https://www.snopes.com" class="text-brand-yellow hover:underline">Snopes</a></li>
+                    <li><a href="https://www.politifact.com" class="text-brand-yellow hover:underline">PolitiFact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Key Takeaways -->
+            <aside class="bg-gradient-to-br from-blue-800 to-blue-900 text-white rounded-2xl p-10 mb-12 shadow-lg">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-12 h-12 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                            stroke="currentColor" class="w-7 h-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Key Takeaways</h2>
+                        <ul class="space-y-3 text-blue-100">
+                            <li><span class="text-brand-yellow font-bold">✓</span> Always verify the source before
+                                sharing news.</li>
+                            <li><span class="text-brand-yellow font-bold">✓</span> Cross-check info with credible
+                                outlets.</li>
+                            <li><span class="text-brand-yellow font-bold">✓</span> Use reverse image search for visuals.
+                            </li>
+                            <li><span class="text-brand-yellow font-bold">✓</span> Read full articles, not just
+                                headlines.</li>
+                            <li><span class="text-brand-yellow font-bold">✓</span> Refer to professional fact-checking
+                                platforms.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-blue-700">
+                    <p class="text-blue-100 text-sm italic">
+                        “Think before you share. A few minutes of verification can stop the spread of misinformation in
+                        our community.” — Busia CEN
+                    </p>
+                </div>
+            </aside>
+        </article>
+
+
+
+    </main>
+
+</body>
